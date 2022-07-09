@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famtech.com</title>
+    <link rel="stylesheet" href="gps .css">
+</head>
+
+<body>
+    <div class="nav" id="blur">
+
+        <ul>
+            <a href="#" class="logo"><span>F</span>armTech</a>
+            <li class="item"><a href="index.html"> Home</a></li>
+            <li class="item"><a href="f.html">Farmers</a></li>
+            <li class="item"><a href="typ.html"> Methods</a></li>
+            <li class="item">
+                <a href="technology.html">Technology</a>
+            </li>
+            <li class="item"><a href="">Weather Analytics</a></li>
+            <li class="item"><a href="GPS page/gps.html">GPS Agriculture</a></li>
+            <li class="item"><a href="Forum/forum.html">Forum</a></li>
+            <li class="item"><a href="about.html">About Us</a></li>
+
+            <i class="fa fa-user-circle-o fa-2x"></i>
+            <i class="fa fa-share-alt fa-2x"></i>
+
+        </ul>
+    </div>
+    <p>Check your location </p>
+    <br/>
+    <button onclick="getLocation()">Track your location</button>
+
+    <p id="demo"></p>
+
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+
+</body>
+
+</html>

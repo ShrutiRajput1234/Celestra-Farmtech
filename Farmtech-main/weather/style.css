@@ -1,0 +1,6 @@
+body {
+    background-image: url('../dist/time.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
